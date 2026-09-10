@@ -22,7 +22,7 @@ the training run**.
 
 <br>
 
-<img src="docs/hero.png" alt="Four panels, one per project: a model-comparison bar chart for credit scoring, the speech-emotion analyser predicting Happy at 97% confidence, a grid of handwritten characters with their predicted labels, and the cardiac risk web application's landing page." width="100%">
+<img src="docs/hero.png" alt="Four panels, one per project: the credit-scoring dashboard with its headline metric tiles, the speech-emotion analyser predicting Happy at 97% confidence, a grid of handwritten characters with their predicted labels, and the cardiac risk web application's landing page." width="100%">
 
 </div>
 

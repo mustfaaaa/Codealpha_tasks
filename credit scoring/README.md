@@ -15,6 +15,10 @@ billing, payment and delinquency history.
 [![ROC-AUC](https://img.shields.io/badge/test%20ROC--AUC-0.7818-1e40af)](#results)
 [![Licence](https://img.shields.io/badge/data-CC%20BY%204.0-blue)](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
 
+<br>
+
+<img src="docs/img/ui-overview.png" alt="The dashboard's Overview tab: headline tiles for dataset size, default rate, test ROC-AUC, recall and precision, a five-step explanation of how a prediction is made, and the accuracy-trap callout." width="960">
+
 </div>
 
 ---
@@ -46,18 +50,13 @@ lender far more than declining one who would have repaid.
 
 ## Contents
 
-- [Quickstart](#quickstart)
-- [Interactive dashboard](#interactive-dashboard)
-- [The problem](#the-problem)
-- [Dataset](#dataset)
-- [Methodology](#methodology)
-- [Results](#results)
-- [What drives credit risk](#what-drives-credit-risk)
-- [Error analysis](#error-analysis)
-- [Fairness](#fairness)
-- [Limitations](#limitations)
-- [Project structure](#project-structure)
-- [Reproducibility](#reproducibility)
+| | |
+|---|---|
+| [Quickstart](#quickstart) · [The dashboard](#the-dashboard) | Get it running |
+| [Results](#results) · [What drives credit risk](#what-drives-credit-risk) | What it achieves |
+| [Dataset](#dataset) · [Methodology](#methodology) | The choices, and why |
+| [Error analysis](#error-analysis) · [Fairness](#fairness) · [Limitations](#limitations) | The honest caveats |
+| [Reproducibility](#reproducibility) | Every number, regenerated |
 
 ---
 
@@ -108,7 +107,7 @@ Regenerates `notebooks/credit_scoring_analysis.ipynb` and executes every cell.
 
 ---
 
-## Interactive dashboard
+## The dashboard
 
 ```bash
 python -m src.webapp    #  ->  http://127.0.0.1:5000
@@ -140,6 +139,13 @@ marked with the tuned `0.405` threshold, and a **"why" table** placing the appli
 real engineered indicators next to the dataset averages for customers who repaid and
 defaulted — with the riskiest values flagged.
 
+<div align="center">
+  <img src="docs/img/ui-real-customer.png" alt="A real dataset customer scored live: declined at 88.8% probability of default, with the risk-indicator table showing 3 late months, 93.6% average utilisation and a 0.05 repayment effort against the dataset averages, and a footer confirming this customer did in fact default." width="960">
+</div>
+
+<sub>An <b>actual record from the dataset</b>, scored by the real pipeline. The footer states
+what the customer really did, so the prediction can be checked rather than taken on trust.</sub>
+
 <details>
 <summary><b>Accessibility &amp; engineering notes</b></summary>
 
@@ -158,28 +164,15 @@ defaulted — with the riskiest values flagged.
 
 ---
 
-## The problem
-
-> Given an individual's past financial behaviour, predict their creditworthiness.
-
-A **binary classification** problem:
-
-| Label | Meaning | Business reading |
-|:---:|---|---|
-| `0` | Paid the next bill | **GOOD CREDIT** — creditworthy |
-| `1` | Defaulted on the next bill | **BAD CREDIT** — not creditworthy |
-
-Classification is the right framing because the outcome is a discrete yes/no event. The
-model outputs a **probability of default**, which is what a lender actually needs in
-order to set an approval cut-off.
-
----
-
 ## Dataset
 
 **UCI — Default of Credit Card Clients** ([dataset 350](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)) · a Taiwanese bank, April–September 2005 · CC BY 4.0
 
 The dataset **downloads automatically** on first run — nothing to fetch by hand.
+
+**Target** `default`: `1` = failed to pay the October 2005 bill (**bad credit**), `0` = paid
+it (**good credit**). The model outputs the *probability* of `1`, which is what a lender
+needs in order to set an approval cut-off.
 
 | | |
 |---|---|
@@ -460,6 +453,11 @@ conversion to a WOE/IV scorecard, and population-drift monitoring.
 
 ## Project structure
 
+<details>
+<summary><b>Expand the full tree</b></summary>
+
+<br>
+
 ```
 Credit-Scoring-model/
 ├── data/
@@ -492,6 +490,8 @@ Credit-Scoring-model/
 └── report.md                           # full analysis & viva notes
 ```
 
+</details>
+
 Large regenerable artefacts (raw data, processed CSV, `final_model.pkl`) are git-ignored
 and rebuilt by `python -m src.train`.
 
@@ -503,9 +503,10 @@ Seed **42** throughout. Every number in this README and in
 [`report.md`](report.md) is produced by executed code and written to
 `outputs/results/` — none is typed by hand.
 
-```bash
-python -m tests.verify_pipeline
-```
+<details>
+<summary><b><code>python -m tests.verify_pipeline</code></b> — 13 checks, end to end</summary>
+
+<br>
 
 ```
 [PASS]  1. Dataset loading .............. 29,965 rows x 24 cols, no duplicates, ID dropped
@@ -525,15 +526,12 @@ python -m tests.verify_pipeline
 RESULT: 13 passed, 0 failed
 ```
 
----
+</details>
 
-## Documentation
-
-| File | Contents |
-|---|---|
-| [`report.md`](report.md) | Full results, model selection reasoning, error analysis, and **viva Q&A notes** |
-| [`notebooks/credit_scoring_analysis.ipynb`](notebooks/credit_scoring_analysis.ipynb) | Narrative walkthrough from raw data to final model |
-| [`outputs/results/training_log.txt`](outputs/results/training_log.txt) | Complete console log of the run that produced these numbers |
+Deeper reading: [`report.md`](report.md) for the full analysis and viva Q&A notes ·
+[`notebooks/credit_scoring_analysis.ipynb`](notebooks/credit_scoring_analysis.ipynb) for the
+narrative walkthrough · [`outputs/results/training_log.txt`](outputs/results/training_log.txt)
+for the console log of the run that produced these numbers.
 
 ---
 
