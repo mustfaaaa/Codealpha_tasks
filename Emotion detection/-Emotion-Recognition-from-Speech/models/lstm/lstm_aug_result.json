@@ -1,0 +1,26 @@
+{
+  "name": "lstm_aug",
+  "model_key": "lstm",
+  "augmented": true,
+  "class_weight": true,
+  "lr": 0.0005,
+  "batch_size": 32,
+  "build_kwargs": {},
+  "params": 428104,
+  "epochs_run": 32,
+  "train_seconds": 583.3,
+  "val_accuracy": 0.5291666666666667,
+  "val_macro_f1": 0.5157227235211238,
+  "val_weighted_f1": 0.5278820162003098,
+  "classes": [
+    "angry",
+    "calm",
+    "disgust",
+    "fearful",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+  ],
+  "checkpoint": "C:\\Emotion detection\\-Emotion-Recognition-from-Speech\\models\\lstm\\lstm_aug.keras"
+}

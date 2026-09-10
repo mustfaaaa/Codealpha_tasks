@@ -1,0 +1,31 @@
+{
+  "sample_rate": 16000,
+  "duration_sec": 3.0,
+  "n_samples": 48000,
+  "trim_top_db": 30,
+  "peak_normalize": true,
+  "n_mfcc": 40,
+  "n_fft": 2048,
+  "hop_length": 512,
+  "win_length": 2048,
+  "n_mels": 128,
+  "fmin": 20,
+  "fmax": 8000,
+  "n_frames": 94,
+  "cnn_input_shape": [
+    40,
+    94,
+    3
+  ],
+  "seq_input_shape": [
+    94,
+    120
+  ],
+  "channels": [
+    "mfcc",
+    "delta",
+    "delta2"
+  ],
+  "aug_copies_train": 2,
+  "seed": 42
+}

@@ -1,0 +1,103 @@
+[
+  {
+    "name": "cnn_t2",
+    "model_key": "cnn",
+    "augmented": true,
+    "class_weight": true,
+    "lr": 0.001,
+    "batch_size": 64,
+    "build_kwargs": {
+      "filters": [
+        64,
+        128,
+        256
+      ],
+      "dropout": 0.4,
+      "dense_units": 256
+    },
+    "params": 1216840,
+    "epochs_run": 48,
+    "train_seconds": 2939.7,
+    "val_accuracy": 0.6833333333333333,
+    "val_macro_f1": 0.6609065442393978,
+    "val_weighted_f1": 0.6763955519505956,
+    "classes": [
+      "angry",
+      "calm",
+      "disgust",
+      "fearful",
+      "happy",
+      "neutral",
+      "sad",
+      "surprised"
+    ],
+    "checkpoint": "C:\\Emotion detection\\-Emotion-Recognition-from-Speech\\models\\cnn\\cnn_t2.keras"
+  },
+  {
+    "name": "cnn_t1",
+    "model_key": "cnn",
+    "augmented": true,
+    "class_weight": true,
+    "lr": 0.0005,
+    "batch_size": 32,
+    "build_kwargs": {
+      "filters": [
+        32,
+        64,
+        128
+      ],
+      "dropout": 0.3,
+      "dense_units": 128
+    },
+    "params": 306344,
+    "epochs_run": 36,
+    "train_seconds": 701.5,
+    "val_accuracy": 0.6708333333333333,
+    "val_macro_f1": 0.6501835229885378,
+    "val_weighted_f1": 0.6638994615581439,
+    "classes": [
+      "angry",
+      "calm",
+      "disgust",
+      "fearful",
+      "happy",
+      "neutral",
+      "sad",
+      "surprised"
+    ],
+    "checkpoint": "C:\\Emotion detection\\-Emotion-Recognition-from-Speech\\models\\cnn\\cnn_t1.keras"
+  },
+  {
+    "name": "cnn_t3",
+    "model_key": "cnn",
+    "augmented": true,
+    "class_weight": true,
+    "lr": 0.0005,
+    "batch_size": 32,
+    "build_kwargs": {
+      "filters": [
+        32,
+        64
+      ],
+      "dropout": 0.25,
+      "dense_units": 128
+    },
+    "params": 75688,
+    "epochs_run": 40,
+    "train_seconds": 754.4,
+    "val_accuracy": 0.6375,
+    "val_macro_f1": 0.6232860362804056,
+    "val_weighted_f1": 0.6305527244133848,
+    "classes": [
+      "angry",
+      "calm",
+      "disgust",
+      "fearful",
+      "happy",
+      "neutral",
+      "sad",
+      "surprised"
+    ],
+    "checkpoint": "C:\\Emotion detection\\-Emotion-Recognition-from-Speech\\models\\cnn\\cnn_t3.keras"
+  }
+]

@@ -1,0 +1,12 @@
+source,file,true,pred,confidence,correct,reliable
+dataset:train,03-01-08-02-01-01-14.wav,surprised,surprised,0.9989562034606934,True,
+dataset:val,03-01-04-02-01-01-16.wav,sad,sad,0.6969926357269287,True,
+dataset:test,03-01-04-02-01-01-20.wav,sad,sad,0.9472700953483582,True,
+external,simulated_farfield_angry_actor20.wav,angry,sad,0.3296615183353424,False,False
+external,simulated_farfield_happy_actor20.wav,happy,happy,0.5383487343788147,True,False
+external,simulated_farfield_neutral_actor20.wav,neutral,neutral,0.9506176710128784,True,True
+external,simulated_farfield_sad_actor20.wav,sad,fearful,0.585064709186554,False,False
+external,simulated_telephone_angry_actor20.wav,angry,surprised,0.8074053525924683,False,False
+external,simulated_telephone_happy_actor20.wav,happy,happy,0.7637948989868164,True,False
+external,simulated_telephone_neutral_actor20.wav,neutral,neutral,0.989094078540802,True,True
+external,simulated_telephone_sad_actor20.wav,sad,sad,0.43861985206604004,True,False

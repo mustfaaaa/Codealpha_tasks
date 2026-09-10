@@ -1,0 +1,26 @@
+{
+  "name": "cnnlstm_aug",
+  "model_key": "cnn_lstm",
+  "augmented": true,
+  "class_weight": true,
+  "lr": 0.0005,
+  "batch_size": 32,
+  "build_kwargs": {},
+  "params": 1054728,
+  "epochs_run": 30,
+  "train_seconds": 1262.0,
+  "val_accuracy": 0.5958333333333333,
+  "val_macro_f1": 0.5918600534312609,
+  "val_weighted_f1": 0.6051735994770051,
+  "classes": [
+    "angry",
+    "calm",
+    "disgust",
+    "fearful",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+  ],
+  "checkpoint": "C:\\Emotion detection\\-Emotion-Recognition-from-Speech\\models\\cnn_lstm\\cnnlstm_aug.keras"
+}

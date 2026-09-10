@@ -1,0 +1,26 @@
+{
+  "name": "cnn_noaug",
+  "model_key": "cnn",
+  "augmented": false,
+  "class_weight": true,
+  "lr": 0.0005,
+  "batch_size": 32,
+  "build_kwargs": {},
+  "params": 306344,
+  "epochs_run": 34,
+  "train_seconds": 307.3,
+  "val_accuracy": 0.2916666666666667,
+  "val_macro_f1": 0.22538814422015624,
+  "val_weighted_f1": 0.2204140205015,
+  "classes": [
+    "angry",
+    "calm",
+    "disgust",
+    "fearful",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+  ],
+  "checkpoint": "C:\\Emotion detection\\-Emotion-Recognition-from-Speech\\models\\cnn\\cnn_noaug.keras"
+}

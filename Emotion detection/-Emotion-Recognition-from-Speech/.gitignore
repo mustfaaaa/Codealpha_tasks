@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+data/raw/
+data/processed/*.npz
+data/external/*
+!data/external/.gitkeep
+webapp/frontend/node_modules/
+webapp/backend/static/

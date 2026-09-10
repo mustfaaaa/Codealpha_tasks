@@ -1,0 +1,36 @@
+{
+  "results": {
+    "logreg": {
+      "name": "logreg",
+      "val_accuracy": 0.48333333333333334,
+      "val_macro_f1": 0.4524873697719175,
+      "val_weighted_f1": 0.4688600909751028,
+      "fit_seconds": 0.4
+    },
+    "svm_rbf": {
+      "name": "svm_rbf",
+      "val_accuracy": 0.43333333333333335,
+      "val_macro_f1": 0.40830664307878684,
+      "val_weighted_f1": 0.4252706756942957,
+      "fit_seconds": 5.4
+    },
+    "random_forest": {
+      "name": "random_forest",
+      "val_accuracy": 0.425,
+      "val_macro_f1": 0.4070063464610244,
+      "val_weighted_f1": 0.40395142364647635,
+      "fit_seconds": 7.8
+    }
+  },
+  "best": "logreg",
+  "classes": [
+    "angry",
+    "calm",
+    "disgust",
+    "fearful",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+  ]
+}

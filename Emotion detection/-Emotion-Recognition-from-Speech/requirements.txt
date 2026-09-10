@@ -1,0 +1,13 @@
+# Verified working on Python 3.12.10 / Windows 11.
+# NOTE: TensorFlow does not support Python 3.13/3.14 - use a 3.12 interpreter.
+numpy==2.1.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.0
+librosa==1.0.0
+soundfile==0.14.0
+numba==0.67.0
+matplotlib==3.11.1
+seaborn==0.13.2
+joblib==1.6.0
+tensorflow==2.20.0

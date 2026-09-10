@@ -1,0 +1,11 @@
+{
+  "model": "cnn_aug",
+  "test_accuracy_all": 0.7,
+  "test_accuracy_confident": 0.7777777777777778,
+  "confident_coverage": 0.6375,
+  "n_external_files": 8,
+  "simulated_channel": {
+    "n": 8,
+    "n_correct": 5
+  }
+}

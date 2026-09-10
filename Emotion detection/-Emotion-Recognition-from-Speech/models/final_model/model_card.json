@@ -1,0 +1,82 @@
+{
+  "project": "Speech Emotion Recognition (RAVDESS, speaker-independent)",
+  "selected_model": "cnn_aug",
+  "architecture": "cnn",
+  "feature_view": "cnn",
+  "selection_criterion": "one-standard-error rule on validation macro-F1; fewest parameters among models within 1 SE of the best; test set untouched",
+  "selection_details": {
+    "best_raw_model": "cnn_t2",
+    "best_raw_val_macro_f1": 0.6609065442393978,
+    "bootstrap_se": 0.030669980555597248,
+    "cutoff_within_1se": 0.6302365636838005,
+    "models_within_1se": [
+      "cnn_aug",
+      "cnn_t1",
+      "cnn_t2"
+    ],
+    "selected": "cnn_aug",
+    "rule": "one-standard-error rule on validation macro-F1; fewest parameters among models within 1 SE of the best"
+  },
+  "classes": [
+    "angry",
+    "calm",
+    "disgust",
+    "fearful",
+    "happy",
+    "neutral",
+    "sad",
+    "surprised"
+  ],
+  "n_classes": 8,
+  "params": 306344,
+  "trained_on_augmented_data": true,
+  "class_weighting": true,
+  "epochs_run": 36,
+  "train_seconds": 963.2,
+  "validation": {
+    "accuracy": 0.6708333333333333,
+    "macro_f1": 0.6501835229885378,
+    "weighted_f1": 0.6638994615581439
+  },
+  "confidence_threshold": 0.82,
+  "confidence_calibration": {
+    "threshold": 0.82,
+    "coverage_at_threshold": 0.5708333333333333,
+    "selective_accuracy_at_threshold": 0.8102189781021898,
+    "target_selective_accuracy": 0.8,
+    "target_reached": true
+  },
+  "split": {
+    "train_actors": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      24
+    ],
+    "val_actors": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "test_actors": [
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  "seed": 42
+}
