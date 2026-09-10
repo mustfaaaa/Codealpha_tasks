@@ -486,8 +486,7 @@ Credit-Scoring-model/
 │   ├── figures/                        # 11 PNG figures
 │   └── results/                        # CSV/JSON result tables + training log
 ├── requirements.txt
-├── README.md
-└── report.md                           # full analysis & viva notes
+└── README.md
 ```
 
 </details>
@@ -499,9 +498,8 @@ and rebuilt by `python -m src.train`.
 
 ## Reproducibility
 
-Seed **42** throughout. Every number in this README and in
-[`report.md`](report.md) is produced by executed code and written to
-`outputs/results/` — none is typed by hand.
+Seed **42** throughout. Every number in this README is produced by executed code and
+written to `outputs/results/` — none is typed by hand.
 
 <details>
 <summary><b><code>python -m tests.verify_pipeline</code></b> — 13 checks, end to end</summary>
@@ -528,10 +526,10 @@ RESULT: 13 passed, 0 failed
 
 </details>
 
-Deeper reading: [`report.md`](report.md) for the full analysis and viva Q&A notes ·
-[`notebooks/credit_scoring_analysis.ipynb`](notebooks/credit_scoring_analysis.ipynb) for the
-narrative walkthrough · [`outputs/results/training_log.txt`](outputs/results/training_log.txt)
-for the console log of the run that produced these numbers.
+Deeper reading: [`notebooks/credit_scoring_analysis.ipynb`](notebooks/credit_scoring_analysis.ipynb)
+for the narrative walkthrough from raw data to final model ·
+[`outputs/results/training_log.txt`](outputs/results/training_log.txt) for the console log of the
+run that produced these numbers.
 
 ---
 

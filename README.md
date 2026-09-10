@@ -32,7 +32,7 @@ the training run**.
 
 | | Task | What it does | Headline result | Read more |
 |:---:|---|---|---|---|
-| **1** | **Credit Scoring** | Predicts the probability a credit-card customer defaults on their next payment, from six months of billing, payment and delinquency history. | **0.7818** test ROC-AUC · **74.8%** recall at the tuned threshold | [README](credit%20scoring/README.md) · [report](credit%20scoring/report.md) |
+| **1** | **Credit Scoring** | Predicts the probability a credit-card customer defaults on their next payment, from six months of billing, payment and delinquency history. | **0.7818** test ROC-AUC · **74.8%** recall at the tuned threshold | [README](credit%20scoring/README.md) |
 | **2** | **Emotion Recognition from Speech** | Classifies eight emotions from the sound of a voice, on speakers the model has never heard, using MFCC + Δ + ΔΔ features and a CNN. | **70.0%** accuracy · **0.690** macro F1 · **0.942** ROC-AUC | [README](Emotion%20detection/-Emotion-Recognition-from-Speech/README.md) · [report](Emotion%20detection/-Emotion-Recognition-from-Speech/report.md) |
 | **3** | **Handwritten Character Recognition** | Recognises 47 character classes — digits, uppercase and case-distinct lowercase — from a drawing, a scan or a photograph. | **90.01%** accuracy · **89.90%** macro F1 on 18,800 held-out images | [README](Hand%20Written%20Character%20recognition/README.md) · [report](Hand%20Written%20Character%20recognition/report.md) |
 | **4** | **Disease Prediction** | Takes 13 clinical inputs — symptoms, vitals, blood tests, ECG and imaging — and returns a risk classification with the inputs that moved it most. | **0.959** test ROC-AUC · **96.4%** sensitivity at the deployed threshold | [README](Disease-Prediction/Disease-Prediction/README.md) · [report](Disease-Prediction/Disease-Prediction/report.md) |
@@ -75,7 +75,7 @@ Codealpha_tasks/
 
 Each project is **self-contained** and follows the same internal shape: `src/` for the pipeline,
 `outputs/figures/` and `outputs/metrics/` for everything the run produced, `models/` for the
-exported model, a `notebooks/` walkthrough, a full `report.md`, and its own `requirements.txt`.
+exported model, a `notebooks/` walkthrough, and its own `requirements.txt`.
 
 ---
 
